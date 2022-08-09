@@ -1,5 +1,6 @@
 <template>
   <h3>TTER</h3>
+  <Icon Icon="bi:person-square" />
   <div class="container">
     <div class="input">
       <div class="in">
@@ -14,7 +15,6 @@
         <button class="custom">custom</button>
       </div>
       <div class="in">
-        <Icon Icon="bi:person-fill" />
         <input type="number" />
       </div>
     </div>
@@ -32,6 +32,7 @@
             <span>Total</span>
             <span class="regular">/ person</span>
           </div>
+          <Icon icon="bi:person" />
           <div class="price">$ 0.00</div>
         </div>
       </div>
@@ -43,7 +44,6 @@
 </template>
 <script>
 import { Icon } from "@iconify/vue";
-
 export default {
   Components: {
     Icon,
@@ -66,9 +66,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#app h3 {
-  /* flex: 1; */
-}
+
 .container {
   margin: 20px;
   background-color: white;
@@ -115,10 +113,18 @@ body {
   border: none;
   outline: none;
   background-color: rgb(206, 243, 231);
+  text-align: right;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 .input .in {
   border: 1px solid black;
   background-color: rgb(206, 243, 231);
+}
+Icon {
+  height: 30px;
+  width: 30px;
+  z-index: 2;
 }
 .input button {
   width: 28%;
@@ -148,6 +154,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   margin-top: 20px;
+}
+icon {
+  color: black;
 }
 .tip-amount,
 .total-tip {
